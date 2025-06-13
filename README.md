@@ -12,6 +12,12 @@
 
 👉 [Play it now](https://gustavo-zamai.github.io/space-shooter/) 🌐 👈
 
+## 🎮 Controls
+
+- ⬅️ ➡️ — Move left and right  
+- ⬆️ ⬇️ — Move up and down  
+- 🔫 `Spacebar` — Shoot bullets
+
 ## 🛠️ Technologies Used
 
 - **HTML5** – Structure of the game page  
