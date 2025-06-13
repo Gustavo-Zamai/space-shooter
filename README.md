@@ -1,65 +1,74 @@
-<h1 align="center">👾 Space Shooter 👾</h1>
+# 🚀 Space Shooter
+
+**Space Shooter** is a simple arcade-style shooting game built with vanilla JavaScript, HTML, and CSS. Control your spaceship and destroy incoming enemies to earn points!
 
 <p align="center">
-Replica do jogo estilo space shooter dos 16 bits, baseado no desenho Futurama, desenvolvido durante um lab da DIO. <br/>
-</p>
-
-<p align="center">
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-controles">Controles</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-aprendizado">Aprendizado</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-licença">Licença</a>
-</p>
-
-<p align="center">
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
-</p>
-
-<br>
-
-<p align="center">
-  <img alt="Jogo estilo Space Shooter, baseado no desenho Futurama" src=".github/preview.png" width="100%">
+  <img alt="Space Shooter initial screen" src=".github/preview.png" width="100%">
 </p>
 
 ---
 
-## 🚀 Tecnologias
+## 🎮 Live Demo
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+👉 [Play it now](https://gustavo-zamai.github.io/space-shooter/) 👈
 
-- HTML e CSS
-- JavaScript
-- Git e Github
+## 🛠️ Technologies Used
 
----
+- **HTML5** – Structure of the game page  
+- **CSS3** – Styling and animations  
+- **JavaScript (Vanilla)** – Game logic and interactions
 
-## 💻 Projeto
+## 📦 Project Structure
 
-Space shooter é uma replica dos jogos de 16 bits, baseado no desenho Futurama, onde a nave se move na horizontal e atira nos aliens.
-Caso queira testar e atirar em alguns aliens, teste o projeto clicando no link abaixo.
+```bash
+space-shooter/
+├── .github/
+├── image/
+├── README.md     # This file 😁
+├── index.html    # Game UI
+├── style.css     # Visual styling
+└── script.js     # Game logic
+```
 
-[Acesse o projeto finalizado, online](https://Gustavo-Zamai.github.io/Space-Shooter)
+## 🚀 How to Run Locally
 
----
-## 🎮 Controles
+#### 1. Clone the repository:
+```bash
+git clone https://github.com/Gustavo-Zamai/space-shooter.git
+cd space-shooter
+```
+#### 2. Open index.html in your browser:
 
-- 🔛 Space : Shoot
-- ⬆️ Arrow up : Move up 
-- ⬇️ Arrow down : Move down
+```bash
+start index.html      # On Windows
+# or
+open index.html       # On macOS
+# or
+xdg-open index.html   # On Linux
+# No installation required — it's a fully static front-end game!
+```
 
----
+## 📌 Features
+- Keyboard-controlled spaceship
+ 
+- Bullet shooting mechanics
+ 
+- Enemies appearing on screen
+ 
+- Collision detection
+ 
+- Score system
 
-## 📑 Aprendizado
+## 🧠 Learning Goals
+- This project helps you practice:
+ 
+- DOM manipulation
+ 
+- Event handling (keydown, keyup)
+ 
+- Animation with setInterval or requestAnimationFrame
 
-Esse projeto foi muito bom para praticar o Javascript e o posicionamento de elementos relative no CSS.
+- Game loop structure
 
----
-
-## 📝 Licença
-
-Esse projeto está sob a licença MIT.
-
----
-
-Feito com ♥ por Gustavo Zamai 👽🔫
+## 📄 License
+- This project is under MIT license, open for learning purposes. Feel free to fork and build on top of it.
