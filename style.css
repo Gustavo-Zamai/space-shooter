@@ -1,70 +1,218 @@
+/* CSS ATUALIZADO COM EFEITOS MELHORADOS */
+:root {
+  --primary-color: #4cc9f0;
+  --secondary-color: #f72585;
+  --dark-bg: #16213e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: cornflowerblue;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Orbitron", "Arial", sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, var(--dark-bg) 100%);
+  overflow: hidden;
+  color: white;
 }
 
 #gameArea {
-    background: black url(image/sky.png);
-    height: 100%;
-    width: 100%;
+  position: relative;
+  background: url("image/sky.png") center/cover no-repeat;
+  height: 600px;
+  width: 800px;
+  border: 3px solid var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(76, 201, 240, 0.5);
+  overflow: hidden;
 }
 
 .game-instructions {
-    position: relative;
-    color:rgb(255, 72, 0);
-    left: 660px;
-    top: 0px;
+  position: absolute;
+  color: var(--secondary-color);
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--secondary-color);
+  max-width: 80%;
+  text-shadow: 0 0 5px var(--secondary-color);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  animation: pulse 1.5s infinite;
 }
 
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.05);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
 
 .start-button {
-    position: relative;
-    color: rgb(230, 93, 3);
-    top: 9rem;
-    left: 680px;
-    cursor: pointer;
+  position: absolute;
+  color: var(--primary-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  font-size: 1.8rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px 40px;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px var(--primary-color);
+  animation: float 3s ease-in-out infinite;
 }
 
-.start-button:hover{
-    color: rgba(255, 72, 0, 0.5);
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -55%);
+  }
+}
+
+.start-button:hover {
+  color: white;
+  background-color: rgba(76, 201, 240, 0.3);
+  box-shadow: 0 0 15px var(--primary-color);
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
 .player {
-    position: relative;
-    height: 80px;
-    width: 90px;
-    left: 20px;
-    top: 250px
+  position: absolute;
+  height: 60px;
+  width: 70px;
+  left: 20px;
+  top: 250px;
+  transition: transform 0.1s ease;
+  filter: drop-shadow(0 0 5px rgba(76, 201, 240, 0.8));
+  z-index: 10;
+}
+
+.player:active {
+  transform: scale(0.95);
 }
 
 .laser {
-    position: relative;
-    width: 50px;
-    height: 40px;
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  filter: drop-shadow(0 0 3px var(--secondary-color));
+  z-index: 5;
 }
 
 .alien {
-    height: 60px;
-    width: 70px;
-    position: relative;
+  height: 50px;
+  width: 60px;
+  position: absolute;
+  filter: drop-shadow(0 0 5px rgba(247, 37, 133, 0.8));
+  z-index: 8;
+  transition: all 0.3s ease;
 }
 
 .alien-transition {
-    opacity: 1;
-    transition: opacity 1.5s ease-in-out;
+  opacity: 1;
+  transition: opacity 1s ease-in-out, transform 0.5s ease;
 }
 
 .dead-alien {
-    height: 60px;
-    width: 70px;
-    position: relative;
-    opacity: 0;
+  height: 50px;
+  width: 60px;
+  position: absolute;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 6;
 }
 
+.score-display {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid var(--primary-color);
+}
+
+/* Efeitos especiais */
+.explosion {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: url("image/explosion.png") center/contain no-repeat;
+  animation: explode 0.5s forwards;
+  z-index: 9;
+}
+
+@media (min-height: 500px) {
+  .game-instructions,
+  .score-display {
+    font-size: 2vmin;
+  }
+
+  .start-button {
+    font-size: 3vmin;
+    padding: 1vmin 2vmin;
+  }
+}
+
+/* Animações */
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.05);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -55%);
+  }
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Jogo no estilo space shooter, baseado no desenho Futurama">
     <meta name="author" content="Gustavo Zamai">
-    <title>Shooter</title>
+    <title>Space Shooter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon">
 </head>
 <body>
     <div id="gameArea">
-        <img class="player" src="./image/ship.png" alt="hero">
-        <h4 class="game-instructions">
+        <img class="player" src="./image/ship.png" alt="Nave do jogador">
+        <div class="game-instructions animate__animated animate__fadeInDown">
             KILL THEM ALL!!!
-        </h4>
-        <div class="start-button">
-            <h1>START</h1>
         </div>
+        <div class="start-button animate__animated animate__pulse animate__infinite">
+            START
+        </div>
+        <div class="score-display">SCORE: <span id="score">0</span></div>
     </div>
-    <script type="text/javascript" src="script.js"></script>
+
+
+    <script src="script.js">
+        // Seu código JavaScript aqui
+        // Lembre-se de atualizar o placar com:
+        // document.getElementById('score').textContent = score;
+    </script>
 </body>
 </html>
