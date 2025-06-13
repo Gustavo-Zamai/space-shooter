@@ -78,3 +78,9 @@ xdg-open index.html   # On Linux
 
 ## 📄 License
 - This project is under MIT license, open for learning purposes. Feel free to fork and build on top of it.
+
+## 👤 Author
+#### Gustavo Zamai
+
+[LinkedIn](https://www.linkedin.com/in/gustavo-sim%C3%A3o-zamai-664a5521a/) • 
+[GitHub](https://github.com/Gustavo-Zamai)
