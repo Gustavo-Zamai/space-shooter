@@ -10,7 +10,7 @@
 
 ## 🎮 Live Demo
 
-👉 [Play it now](https://gustavo-zamai.github.io/space-shooter/) 👈
+👉 [Play it now](https://gustavo-zamai.github.io/space-shooter/) 🌐 👈
 
 ## 🛠️ Technologies Used
 
